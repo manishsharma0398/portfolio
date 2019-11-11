@@ -1,0 +1,236 @@
+$color-primary: #0a0c18;
+$color-primary-2: #020312;
+$color-primary-3: #060817;
+
+$color-black: #1d2124;
+$color-gray: #343a40;
+$color2: #343440;
+
+$color-orange-dark: #eb4323;
+$color-orange-light: #f26c4f;
+
+$color-white: #ffffff;
+$color-white-2: #dfdfdf;
+
+@import url("https://fonts.googleapis.com/css?family=McLaren|Ubuntu:400,500,700&display=swap");
+
+body {
+  background: $color-primary;
+  position: relative;
+}
+
+nav {
+  padding: 0 !important;
+  background: $color-white !important;
+  position: relative;
+
+  .navbar-brand {
+    background: $color-orange-light;
+    position: absolute;
+    bottom: -30px;
+    left: 10%;
+    height: 64px;
+    width: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: unset;
+    padding: unset;
+    box-shadow: 2px 5px 8px 1px #000000e8;
+
+    .brand {
+      font-size: 20px;
+      // font-size: 17px;
+      font-family: "McLaren", cursive;
+      font-weight: 400;
+      // color: $color-black;
+      color: #ffffff;
+    }
+  }
+
+  .container {
+    // height: 100%;
+
+    .collapse.navbar-collapse {
+    }
+  }
+
+  .navbar {
+    &-nav {
+      // height: 100%;
+      // list-style-type: none;
+      // display: flex;
+      // justify-content: space-between;
+      // align-items: center;
+
+      .nav-item {
+        margin: 0px 8px;
+        height: 57.5px;
+
+        &.active {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            background-color: $color-orange-light;
+            color: $color-orange-light;
+            width: 100%;
+            top: 100%;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 100%;
+            border-left: 5px solid $color-orange-light;
+            border-right: 5px solid transparent;
+            border-top: 5px solid $color-orange-light;
+            border-bottom: 5px solid transparent;
+          }
+        }
+
+        &:hover,
+        &.active {
+          background-color: rgba(25, 25, 25, 0.05);
+        }
+
+        &:hover {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            background-color: $color-orange-light;
+            color: $color-orange-light;
+            width: 100%;
+            top: 100%;
+          }
+
+          .nav-link {
+            color: $color-primary;
+          }
+        }
+
+        .nav-link {
+          height: 100%;
+          color: $color-primary;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 15px;
+          font-family: "Ubuntu", sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  flex-grow: unset;
+  // height: 57.5px;
+}
+
+.navbar-toggler {
+  margin: 8px 16px 8px auto !important;
+}
+
+.navbar-toggler .nav-link {
+  margin-left: auto !important;
+}
+
+main.container {
+  #home {
+    background-image: url("../img/IMG_5014.jpg");
+    // background-position: center;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-top: 58px;
+    height: calc(100vh - 58px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .icons {
+      // margin-top: calc(100vh + 30%);
+      margin-bottom: 50px;
+
+      span {
+        display: inline-block;
+        cursor: pointer;
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+
+        i {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .intro {
+      color: white;
+      font-size: 50px;
+      margin-bottom: 30px;
+    }
+
+    #changing-box {
+      color: white;
+      padding: 20px 40px;
+      border: 5px solid white;
+      position: relative;
+      display: inline-block;
+      font-size: 45px;
+      transition: all 2s linear !important;
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        bottom: -13px;
+        border-left: 5px solid white;
+        border-right: 5px solid transparent;
+        border-top: 5px solid white;
+        border-bottom: 5px solid transparent;
+      }
+    }
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 1000;
+  overflow: hidden;
+}

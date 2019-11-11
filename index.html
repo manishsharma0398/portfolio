@@ -8,11 +8,17 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/788f514cf9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Rizals.in</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="loader"></div>
+
+    <nav class="navbar navbar-expand-md navbar-light">
       <div class="container">
         <a class="navbar-brand" href="#">
           <div class="brand">Rizals</div>
@@ -50,15 +56,36 @@
       </div>
     </nav>
 
-    <div class="container">
-      <section id="home"></section>
+    <main class="container">
+      <section id="home">
+        <div class="icons">
+          <span>
+            <i class="fab fa-facebook" title="Follow on fb"></i>
+          </span>
+          <span>
+            <i class="fab fa-instagram"></i>
+          </span>
+          <span>
+            <i class="fab fa-github"></i>
+          </span>
+          <span>
+            <i class="fab fa-twitter"></i>
+          </span>
+        </div>
+        <p class="intro">I am Manish Sharma</p>
+        <div id="changing-box">
+          <div id="words">Programmer</div>
+        </div>
+      </section>
+
       <section id="about"></section>
       <section id="projects"></section>
       <section id="testimonials"></section>
       <section id="contact"></section>
-    </div>
+    </main>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/type-Effevt.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>

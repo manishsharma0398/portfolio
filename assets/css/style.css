@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css?family=McLaren|Ubuntu:400,500,700&display=swap");
+body {
+  background: #0a0c18;
+  position: relative;
+}
+
+nav {
+  padding: 0 !important;
+  background: #ffffff !important;
+  position: relative;
+}
+
+nav .navbar-brand {
+  background: #f26c4f;
+  position: absolute;
+  bottom: -30px;
+  left: 10%;
+  height: 64px;
+  width: 74px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: unset;
+  padding: unset;
+  -webkit-box-shadow: 2px 5px 8px 1px #000000e8;
+          box-shadow: 2px 5px 8px 1px #000000e8;
+}
+
+nav .navbar-brand .brand {
+  font-size: 20px;
+  font-family: "McLaren", cursive;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+nav .navbar-nav .nav-item {
+  margin: 0px 8px;
+  height: 57.5px;
+}
+
+nav .navbar-nav .nav-item.active {
+  position: relative;
+}
+
+nav .navbar-nav .nav-item.active::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #f26c4f;
+  color: #f26c4f;
+  width: 100%;
+  top: 100%;
+}
+
+nav .navbar-nav .nav-item.active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 100%;
+  border-left: 5px solid #f26c4f;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #f26c4f;
+  border-bottom: 5px solid transparent;
+}
+
+nav .navbar-nav .nav-item:hover, nav .navbar-nav .nav-item.active {
+  background-color: rgba(25, 25, 25, 0.05);
+}
+
+nav .navbar-nav .nav-item:hover {
+  position: relative;
+}
+
+nav .navbar-nav .nav-item:hover::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #f26c4f;
+  color: #f26c4f;
+  width: 100%;
+  top: 100%;
+}
+
+nav .navbar-nav .nav-item:hover .nav-link {
+  color: #0a0c18;
+}
+
+nav .navbar-nav .nav-item .nav-link {
+  height: 100%;
+  color: #0a0c18;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-collapse {
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+}
+
+.navbar-toggler {
+  margin: 8px 16px 8px auto !important;
+}
+
+.navbar-toggler .nav-link {
+  margin-left: auto !important;
+}
+
+main.container #home {
+  background-image: url("../img/IMG_5014.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 58px;
+  height: calc(100vh - 58px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main.container #home .icons {
+  margin-bottom: 50px;
+}
+
+main.container #home .icons span {
+  display: inline-block;
+  cursor: pointer;
+}
+
+main.container #home .icons span:not(:first-child) {
+  margin-left: 10px;
+}
+
+main.container #home .icons span i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+
+main.container #home .intro {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+main.container #home #changing-box {
+  color: white;
+  padding: 20px 40px;
+  border: 5px solid white;
+  position: relative;
+  display: inline-block;
+  font-size: 45px;
+  -webkit-transition: all 2s linear !important;
+  transition: all 2s linear !important;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main.container #home #changing-box::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: -13px;
+  border-left: 5px solid white;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white;
+  border-bottom: 5px solid transparent;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 1000;
+  overflow: hidden;
+}
