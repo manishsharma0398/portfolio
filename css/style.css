@@ -3,13 +3,12 @@ nav {
   padding: 0 !important;
   background: #ffffff !important;
   position: relative;
-  border-bottom: 1px solid black;
 }
 
 nav .navbar-brand {
   background: #f26c4f;
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 10%;
   height: 64px;
   width: 74px;
@@ -32,7 +31,7 @@ nav .navbar-brand .brand {
   font-size: 20px;
   font-family: "McLaren", cursive;
   font-weight: 400;
-  color: #ffffff;
+  color: #1d2124;
 }
 
 nav .navbar-nav .nav-item {
@@ -44,11 +43,21 @@ nav .navbar-nav .nav-item.active {
   position: relative;
 }
 
+nav .navbar-nav .nav-item.active::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #f26c4f;
+  color: #f26c4f;
+  width: 100%;
+  top: 100%;
+}
+
 nav .navbar-nav .nav-item.active::after {
   content: "";
   position: absolute;
   left: 10px;
-  top: 55px;
+  top: 100%;
   border-left: 5px solid #f26c4f;
   border-right: 5px solid transparent;
   border-top: 5px solid #f26c4f;
@@ -56,12 +65,25 @@ nav .navbar-nav .nav-item.active::after {
 }
 
 nav .navbar-nav .nav-item:hover, nav .navbar-nav .nav-item.active {
-  border-bottom: 2.5px solid #f26c4f;
   background-color: rgba(25, 25, 25, 0.05);
 }
 
 nav .navbar-nav .nav-item:hover {
-  color: black;
+  position: relative;
+}
+
+nav .navbar-nav .nav-item:hover::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #f26c4f;
+  color: #f26c4f;
+  width: 100%;
+  top: 100%;
+}
+
+nav .navbar-nav .nav-item:hover .nav-link {
+  color: #0a0c18;
 }
 
 nav .navbar-nav .nav-item .nav-link {
@@ -82,10 +104,6 @@ nav .navbar-nav .nav-item .nav-link {
           align-items: center;
 }
 
-nav .navbar-nav .nav-item .nav-link:hover {
-  color: #343a40;
-}
-
 .navbar-collapse {
   -webkit-box-flex: unset;
       -ms-flex-positive: unset;
@@ -93,7 +111,7 @@ nav .navbar-nav .nav-item .nav-link:hover {
 }
 
 .navbar-toggler {
-  margin-left: auto !important;
+  margin: 8px 16px 8px auto !important;
 }
 
 .navbar-toggler .nav-link {
